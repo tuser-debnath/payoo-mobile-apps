@@ -1,17 +1,35 @@
 // Login Button Functionality
-document.getElementById('login-btn').addEventListener('click', function(event){
-    event.preventDefault()
-    const mobileNumber = 12345678910;
-    const pinNumber = 1234;
+// document.getElementById('login-btn').addEventListener('click', function(event){
+//     event.preventDefault()
+//     const mobileNumber = 12345678910;
+//     const pinNumber = 1234;
 
-    const mobileNumberValue = document.getElementById('mobile-number').value;
-    const mobileNumberValueConverted = parseInt(mobileNumberValue);
-    const pinNumberValue = document.getElementById('pin-number').value;
-    const pinNumberValueConverted = parseInt(pinNumberValue);
+//     const mobileNumberValue = document.getElementById('mobile-number').value;
+//     const mobileNumberValueConverted = parseInt(mobileNumberValue);
+//     const pinNumberValue = document.getElementById('pin-number').value;
+//     const pinNumberValueConverted = parseInt(pinNumberValue);
 
-    if(mobileNumber === mobileNumberValueConverted && pinNumber === pinNumberValueConverted){
-        window.location.href="home.html";
-    }else{
-        alert("Invalid Credentials")
-    }
-})
+//     if(mobileNumber === mobileNumberValueConverted && pinNumber === pinNumberValueConverted){
+//         window.location.href="home.html";
+//     }else{
+//         alert("Invalid Credentials")
+//     }
+// })
+
+
+// 2nd Time Practice
+document.getElementById("login-btn")
+    .addEventListener("click", function (e) {
+        e.preventDefault()
+        const mobileNumber = 12345678910;
+        const pinNumber = 1234;
+
+        const mobileNumberValue = parseInt(document.getElementById('mobile-number').value);
+        const pinNumberValue = parseInt(document.getElementById('pin-number').value);
+
+        if(mobileNumberValue === mobileNumber && pinNumberValue === pinNumber){
+            window.location.href="./home.html"
+        }else{
+            alert('Invalid Credentials')
+        }
+    });
